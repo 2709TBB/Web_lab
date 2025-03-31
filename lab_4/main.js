@@ -1,9 +1,3 @@
-const data = [
-    { ho: "Nguyễn Văn", ten: "A", queQuan: "Hà Nội", trinhDo: "Đại học", heSoLuong: 3.5 },
-    { ho: "Trần Thị", ten: "B", queQuan: "Sài Gòn", trinhDo: "Cao đẳng", heSoLuong: 2.8 },
-    { ho: "Lê Văn", ten: "C", queQuan: "Đà Nẵng", trinhDo: "Trung cấp", heSoLuong: 2.2 },
-];
-
 function renderTable() {
     const tableBody = document.getElementById("data-table");
     tableBody.innerHTML = "";
@@ -30,7 +24,6 @@ function deleteRow(index) {
     }
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
     renderTable();
-}); 
+});
