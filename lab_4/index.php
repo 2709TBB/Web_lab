@@ -25,9 +25,9 @@
                 <?php
                 
                 $data = [
-                    ["ho" => "Nguyễn Văn", "ten" => "A", "queQuan" => "Hà Nội", "trinhDo" => "Đại học", "heSoLuong" => 3.5],
-                    ["ho" => "Trần Thị", "ten" => "B", "queQuan" => "Sài Gòn", "trinhDo" => "Cao đẳng", "heSoLuong" => 2.8],
-                    ["ho" => "Lê Văn", "ten" => "C", "queQuan" => "Đà Nẵng", "trinhDo" => "Trung cấp", "heSoLuong" => 2.2],
+                    ["Nguyễn Văn", "A", "Hà Nội", "Đại học", 3.5],
+                    ["Trần Thị", "B", "Sài Gòn", "Cao đẳng", 2.8],
+                    ["Lê Văn", "C", "Đà Nẵng", "Trung cấp", 2.2],
                 ];
 
                 
@@ -35,19 +35,18 @@
                     echo "<tr id='row-{$index}'>";
                     echo "<td><button class='btn btn-danger btn-sm' onclick='deleteRow({$index})'>Xóa</button></td>";
                     echo "<td>" . ($index + 1) . "</td>";
-                    echo "<td>{$item['ho']}</td>";
-                    echo "<td>{$item['ten']}</td>";
-                    echo "<td>{$item['queQuan']}</td>";
-                    echo "<td>{$item['trinhDo']}</td>";
-                    echo "<td>{$item['heSoLuong']}</td>";
+                    echo "<td>{$item[0]}</td>"; // Họ
+                    echo "<td>{$item[1]}</td>"; // Tên
+                    echo "<td>{$item[2]}</td>"; // Quê quán
+                    echo "<td>{$item[3]}</td>"; // Trình độ
+                    echo "<td>{$item[4]}</td>"; // Hệ số lương
                     echo "</tr>";
                 }
-                ?>
+    ?>
             </tbody>
         </table>
     </div>
     <script>
-        
         function deleteRow(index) {
             const row = document.getElementById(`row-${index}`);
             if (row) {
