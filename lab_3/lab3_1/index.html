@@ -12,15 +12,23 @@
         }
         .left {
             flex: 6;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
         }
         .right {
             flex: 4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container mt-5">
-        <!-- Nội dung bên trái -->
+        <!-- Left content -->
         <div class="left">
             <h3>Nhập thông tin</h3>
             <form id="personForm">
@@ -42,7 +50,7 @@
             </form>
         </div>
 
-        <!-- Nội dung bên phải -->
+        <!-- Right content -->
         <div class="right">
             <h3>Danh sách đối tượng</h3>
             <div id="personList"></div>
@@ -81,7 +89,7 @@
             const person = new Person(idCounter++, name, age, parseFloat(gpa));
             persons.push(person);
 
-            // Thêm button hiển thị đối tượng
+            
             const personList = document.getElementById("personList");
             const button = document.createElement("button");
             button.className = "btn btn-outline-primary btn-sm m-1";
