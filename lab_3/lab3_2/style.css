@@ -1,0 +1,118 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; 
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; 
+    padding: 20px;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+}
+
+
+#display {
+    font-size: 2rem;
+    height: 60px;
+    text-align: right;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    color: #333; /* Màu chữ */
+    font-family: 'Courier New', Courier, monospace; /* Font chữ kiểu máy tính */
+}
+
+/* Lưới các nút bấm */
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột */
+    gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+/* Đặt kích thước và kiểu dáng cho các nút bấm */
+.calculator-grid button {
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Màu sắc cho các nút */
+button.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+button.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+button.btn-success:hover {
+    background-color: #1e7e34;
+}
+
+button.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.btn-danger:hover {
+    background-color: #bd2130;
+}
+
+button.btn-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+button.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Hiệu ứng khi nhấn nút */
+.calculator-grid button:active {
+    transform: scale(0.95); /* Thu nhỏ nút khi nhấn */
+}
+
+/* Lịch sử tính toán */
+#history {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#history div {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#history div:last-child {
+    border-bottom: none;
+}
+
+/* Nút xóa lịch sử */
+button.btn-warning {
+    width: 100%;
+}
